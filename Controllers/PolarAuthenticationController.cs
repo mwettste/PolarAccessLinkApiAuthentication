@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PolarOAuthAuthentication.Controllers
 {
-    public class OauthCallbackController : Controller 
+    public class PolarAuthenticationController : Controller 
     {
         private readonly IHttpClientFactory httpClientFactory;
         // client id & secret which you received when registering your application with Polar Access Link
@@ -15,7 +15,7 @@ namespace PolarOAuthAuthentication.Controllers
         private readonly string clientSecret = "YOUR_POLAR_ACCESSLINK_CLIENT_SECRET";
         private readonly string requestUri = "https://polarremote.com/v2/oauth2/token"; // URL to request the bearer token from
 
-        public OauthCallbackController(IHttpClientFactory httpClientFactory)
+        public PolarAuthenticationController(IHttpClientFactory httpClientFactory)
         {
             this.httpClientFactory = httpClientFactory;
         }
